@@ -1,0 +1,252 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer utilities {
+  html.light header.fixed {
+    background-color: rgba(248, 248, 249, 0.94) !important;
+    backdrop-filter: blur(16px) !important;
+    border-bottom-color: rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+  }
+}
+
+@theme {
+  --font-display: "Syne", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-mono: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* ==========================================================================
+   FRAV LIGHT MODE ARCHITECTURAL STYLING (SWISS ATELIER THEME)
+   ========================================================================== */
+
+html.light {
+  color-scheme: light;
+}
+
+html.light body {
+  background-color: #F8F8F9 !important;
+  color: #0A0A0A !important;
+}
+
+/* 1. Main Backgrounds */
+html.light .bg-\[\#0A0A0A\],
+html.light .bg-\[\#080808\],
+html.light .bg-\[\#050505\],
+html.light .bg-\[\#040404\],
+html.light .bg-black {
+  background-color: #F8F8F9 !important;
+  color: #0A0A0A !important;
+}
+
+/* 2. Elevated Cards & Containers */
+html.light .bg-\[\#0D0D0D\],
+html.light .bg-\[\#0E0E0E\],
+html.light .bg-\[\#0F0F0F\],
+html.light .bg-neutral-950,
+html.light .bg-neutral-900 {
+  background-color: #FFFFFF !important;
+  color: #0A0A0A !important;
+}
+
+/* 3. Translucent Surfaces */
+html.light .bg-neutral-900\/60,
+html.light .bg-neutral-900\/80,
+html.light .bg-neutral-950\/60,
+html.light .bg-neutral-950\/80,
+html.light .bg-neutral-950\/90 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+/* 4. Text Inversions */
+html.light .text-white {
+  color: #0A0A0A !important;
+}
+
+html.light .text-neutral-200,
+html.light .text-neutral-300,
+html.light .text-neutral-400 {
+  color: #4B4B4B !important;
+}
+
+html.light .text-neutral-500,
+html.light .text-neutral-600,
+html.light .text-neutral-700 {
+  color: #767676 !important;
+}
+
+html.light .light-image-overlay {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+html.light .light-image-label {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 9999px;
+  background-color: rgba(10, 10, 10, 0.78);
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
+}
+
+html.light .light-image-overlay :is(
+  .text-white,
+  .text-neutral-200,
+  .text-neutral-300,
+  .text-neutral-400,
+  .text-neutral-500,
+  .text-neutral-600,
+  .text-neutral-700
+) {
+  color: #FFFFFF !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+html.light .light-image-overlay :is(a, button).border-white\/20,
+html.light .light-image-overlay :is(a, button).border-white\/30 {
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* Monumental Background Watermarks */
+html.light .text-white\/\[0\.04\],
+html.light .text-white\/\[0\.05\] {
+  color: rgba(0, 0, 0, 0.04) !important;
+}
+
+/* 5. Hairline Borders */
+html.light .border-white\/5,
+html.light .border-white\/10,
+html.light .border-white\/15,
+html.light .border-white\/20,
+html.light .border-white\/30,
+html.light .border-white\/40,
+html.light .border-neutral-800,
+html.light .border-neutral-900 {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 6. Primary Action Buttons (Inverted: Black Button with Crisp White Text) */
+html.light .bg-white.text-black,
+html.light button.bg-white.text-black {
+  background-color: #0A0A0A !important;
+  color: #FFFFFF !important;
+}
+
+html.light .bg-white.text-black:hover,
+html.light button.bg-white.text-black:hover {
+  background-color: #FF4F38 !important;
+  color: #FFFFFF !important;
+}
+
+/* 7. Outlined Action Buttons */
+html.light a.border-white\/20,
+html.light a.border-white\/30,
+html.light button.border-white\/20,
+html.light button.border-white\/30 {
+  border-color: rgba(0, 0, 0, 0.2) !important;
+  color: #0A0A0A !important;
+}
+
+html.light a.border-white\/20:hover,
+html.light button.border-white\/20:hover {
+  border-color: #0A0A0A !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+  color: #0A0A0A !important;
+}
+
+/* 9. Mobile Navigation Drawer */
+html.light .fixed.inset-0.bg-\[\#0A0A0A\] {
+  background-color: #F8F8F9 !important;
+}
+
+/* 10. Modals & Overlays */
+html.light .bg-black\/85 {
+  background-color: rgba(0, 0, 0, 0.45) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+html.light input,
+html.light textarea,
+html.light select {
+  background-color: #F3F3F5 !important;
+  color: #0A0A0A !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #888888 !important;
+}
+
+/* 11. Stacking Card Shadows in Light Mode */
+html.light .shadow-\[0_-30px_70px_rgba\(0\,0\,0\,0\.98\)\],
+html.light .shadow-\[0_-25px_60px_rgba\(0\,0\,0\,0\.95\)\] {
+  box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.08), 0 4px 20px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* 12. Top Progress Line */
+html.light .fixed.top-0.bg-white {
+  background-color: #0A0A0A !important;
+}
+
+/* 13. Text Selection */
+html.light ::selection {
+  background-color: #0A0A0A !important;
+  color: #FFFFFF !important;
+}
+
+/* Lenis Smooth Scroll Recommended Styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Continuous Marquee Keyframes */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 24s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
